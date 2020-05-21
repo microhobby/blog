@@ -75,7 +75,7 @@ Check if the device was added to your project.
 
 To have access to the serial devices we need to add the default `torizon` user to `dialout` group. Go to the Torizon Visual Studio Code Extension Configurations and add the `buildcommands`:
 
-```
+```bash
 RUN usermod -a -G dialout torizon 
 ```
 
@@ -85,7 +85,7 @@ RUN usermod -a -G dialout torizon
 
 To easily parse NMEA data from GPS module, we use the `SharpGIS.NmeaParser` library. To add it to the project open a new terminal using the Visual Studio Code and enter the following command:
 
-```
+```bash
 dotnet add package SharpGIS.NmeaParser
 ```
 
