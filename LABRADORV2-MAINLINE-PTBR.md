@@ -1,10 +1,4 @@
-﻿Agora o Labrador V2 da Caninos Loucos, o Single Board Computer Brasileiro, está oficialmente no Kernel Linux 🥳💃 🎉! Nesse post eu apresento as minhas contribuições para incluir o Labrador no repositório git do Linus Torvalds.
-
-Aqui o Caninos Loucos Labrador v2 dando boot rodando Kernel v5.10 e Ubuntu 20.10:
-
-<p style="text-align: center;"><iframe width="350" height="197" src="https://www.youtube.com/embed/_hkDwQZO2iY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span></iframe></p>
-
-## Caninos Loucos Labrador - Kernel Mainline
+﻿## Caninos Loucos Labrador - Kernel Mainline
 
 O Labrador não tinha suporte para Kernel `mainline`. O pessoal da Caninos mantém um Kernel `downstream` com o suporte ao seu hardware no Github: https://github.com/caninos-loucos/labrador-linux . Daí eu vi uma oportunidade de contribuir para adicionar esse suporte na árvore do Linus Torvalds.
 
