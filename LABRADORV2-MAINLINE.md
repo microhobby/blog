@@ -1,22 +1,22 @@
 ﻿## Caninos Loucos Labrador - Kernel Mainline
 
-O Labrador não tinha suporte para Kernel `mainline`. O pessoal da Caninos mantém um Kernel `downstream` com o suporte ao seu hardware no Github: https://github.com/caninos-loucos/labrador-linux . Daí eu vi uma oportunidade de contribuir para adicionar esse suporte na árvore do Linus Torvalds.
+Labrador did not have support for the mainline Kernel. Caninos Loucos engineers are maintain a downstream Kernel with support for their hardware on Github: https://github.com/caninos-loucos/labrador-linux. So, I saw an opportunity to contribute to adding this support to the Linus Torvalds git tree.
 
-Comecei o trabalho em Fevereiro, foram desde então 7 versões para revisão no `Linux Kernel Mainling List`, com discussões com os mantenedores para melhorias e definições, para enfim agora em Dezembro este suporte entrar no Kernel Linux v5.10:
+I started work in February, since then there have been 7 revision on the `Linux Kernel Mainling List`, with discussions with maintainers for improvements and definitions, so finally in December this support land the Linux kernel v5.10:
 
 ![Labrador V2 Matheus Castello Kernel Linux Contributions](https://github.com/microhobby/blog/blob/master/img/labrador-contribs.png?raw=true)
 
->⚠️ Importante lembrar que essas contribuições foram feitas sem nenhum vínculo com a Caninos Loucos ou LSI-Tec. Foram feitas durante meu tempo livre.
+> ⚠️ It is important to remember that these contributions were made without any employment bond or contract with Caninos Loucos or LSI-Tec. They were made during my free time.
 
-### Como Nascem as Placas para o Kernel Linux? 
+### How Are Development Boards for Kernel Linux born?
 
->😂 Vem a cegonha das placas e taca uma plaquinha bebê na casa do homem Torvalds!
+> 😂 Come the stork of the boards and take a baby board at the house of the Linus Torvalds!
 
-Isso foi algo totalmente novo para mim. É um processo um pouco burocrático, mas vou  defender os processos. Sem essa "burocracia" seria impossível manter tantos sub sistemas, arquiteturas, milhões de linhas de código e garantir a qualidade do Kernel Linux. Tem espaço para melhorias e automações? Tem! Mas não é o escopo desse post.
+This was something totally new for me. It is a work process, but I will defend the processes. Without this process it would be impossible to maintain so many sub systems, architectures, millions of lines of code and guarantee the quality of the Linux Kernel. Do you have room for improvements and automation? Yep! But it is not the scope of this post.
 
-Como nascem as placas para o Kernel Linux? Primeiramente temos que adicionar o fabricante da placa em uma lista de `vendor prefixes`. Esse foi o [primeiro patch](https://lore.kernel.org/patchwork/patch/1309977/) da série:
+How are boards for the Linux Kernel born? First, we have to add the board manufacturer to a list of vendor prefixes. This was the [first patch] (https://lore.kernel.org/patchwork/patch/1309977/) in the series:
 
->⚠️ Eu não estou adicionando aqui no post o diff completo, apenas alguns trechos para ilustrar. Clique nos links para ver o diff e o patch na integra!
+> ⚠️ I'm not adding the full diff here, just a few parts to illustrate. Click on the links to see the diff and the full patch!
 
 ```diff
 diff --git Documentation/devicetree/bindings/vendor-prefixes.yaml
@@ -24,9 +24,9 @@ diff --git Documentation/devicetree/bindings/vendor-prefixes.yaml
      description: Calxeda
 +  "^caninos,.*":
 +    description: Caninos Loucos Program
-``` 
+```
 
-Como podem ver adicionei o prefixo `caninos`. Esse vai ser o prefixo que vamos utilizar para fazer os bindings de hardware compatível com o programa da Caninos Loucos. Então agora podemos documentar o novo hardware que será adicionado. Esse foi o [segundo patch](https://lore.kernel.org/patchwork/patch/1309979/) da série:
+As you can see I added the prefix `caninos`. This will be the prefix that we will use to make the compatible bindings with the Caninos Loucos program. So now we can document the new hardware that will be added. This was the [second patch] (https://lore.kernel.org/patchwork/patch/1309979/) in the series:
 
 ```diff
 diff --git Documentation/devicetree/bindings/arm/actions.yaml 
@@ -40,9 +40,9 @@ diff --git Documentation/devicetree/bindings/arm/actions.yaml
                - lemaker,guitar-bb-rev-b # LeMaker Guitar Base Board rev. B
 ```
 
-Notem que como o Labrador v2 consiste em um computador em módulo e placa base eu tive que documentar ambos que ficaram respectivamente como: `caninos,labrador-v2` e `caninos,labrador-base-m`.
+Note that as Labrador v2 consists of a computer on module and base board I had to document both that were respectively: `caninos, labrador-v2` and `caninos,labrador-base-m`.
 
-Pronto, nasceu a placa? Calma! Com o prefixo do fabricante definido e novo hardware documentado podemos então adicionar a descrição do que o Labrador tem suporte e será inicializado pelo Kernel. Adicionar o famoso `Device Tree Source`. Esse foi o [terceiro patch](https://lore.kernel.org/patchwork/patch/1309975/):
+Ok, was the board born? Calm! With the prefix of the vendor defined and new hardware documented we can then add the description of  Labrador hardware features that will be initialized by the Kernel. Adding the famous `Device Tree Source`. This was the [third patch] (https://lore.kernel.org/patchwork/patch/1309975/):
 
 ```diff
 diff --git arch/arm/boot/dts/owl-s500-labrador-base-m.dts 
@@ -56,6 +56,7 @@ diff --git arch/arm/boot/dts/owl-s500-labrador-base-m.dts
 +		     "caninos,labrador-v2", "actions,s500";
 +
 ```
+
 ```diff
 diff --git arch/arm/boot/dts/owl-s500-labrador-v2.dtsi 
 +#include "owl-s500.dtsi"
@@ -68,32 +69,31 @@ diff --git arch/arm/boot/dts/owl-s500-labrador-v2.dtsi
 +		device_type = "memory";
 +		reg = <0x0 0x80000000>;
 ```
-Notem como eu uso o `vendor prefix` e os nomes documentados na propriedade `compatible`. No caso do `owl-s500-labrador-base-m.dts` o `compatible` é `caninos,labrador-base-m` pois estou descrevendo o hardware da placa base. No `owl-s500-labrador-v2.dtsi` o `compatible` é `caninos,labrador-v2` pois estou agora descrevendo apenas o hardware do computador em módulo. 
 
-Notem também que há um terceiro nível de descrição do hardware que entra no `#include "owl-s500.dtsi"`. Para uma placa nascer ela precisa também da descrição do processador, SoC (System on Chip). E para isso seria necessário também adicionar o `vendor prefix` da fabricante e etc. No caso do Labrador v2 o SoC é Actions Semiconductors s500 descrito pelo `owl-s500.dtsi`. Ainda bem já existiam duas placas que usavam o s500 assim eu não precisei descrever as funcionalidades, propriedades e fabricante do SoC.
+Notice how I use the `vendor prefix` and the names documented in the `compatible` property. In the case of `owl-s500-labrador-base-m.dts` the `compatible` is  `caninos,labrador-base-m` because I am describing the hardware of the base board. In `owl-s500-labrador-v2.dtsi` the `compatible` is `caninos,labrador-v2` because I am now describing only the computer on module hardware.
+
+Also note that there is a third level of hardware description that goes into `#include "owl-s500.dtsi"`. For a board to be born it also needs the processor description, the SoC (System on Chip). And for that it would also be necessary to add the manufacturer's vendor prefix and etc. In the case of Labrador v2 the SoC is Actions Semiconductors s500 described by `owl-s500.dtsi`. Thankfully, there were already more boards that use the s500 on mainline so I didn't have to describe the SoC's features, properties and manufacturer.
 
 ![owl-s500 device tree source hierarchy](https://github.com/microhobby/blog/blob/master/img/cyberpunl-devicetree.png?raw=true)
 
-E com isso, NASCEU! Agora o Kernel Linux tem definido o `vendor prefix` do programa Caninos Loucos e vai saber o que fazer, quais drivers subir, quando der boot em um hardware descrito pelo `Device Tree Source` do Labrador v2 `owl-s500-labrador-base-m.dts` mantido em `mainline`.
+And with that, IT WAS BORN! Now the Linux Kernel has defined the `vendor prefix` of the Caninos Loucos program and will know what to do, which drivers to load, when booting hardware described by the Labrador v2 Device Tree Source `owl-s500-labrador-base-m.dts` maintained in mainline.
 
-## Estado Atual - Em Progresso
+## Current Status - In Progress
 
-Por agora o que o device tree source do Caninos Loucos Labrador descreve é a porta serial UART 3 e um clock para a serial ser usada como console e SÓ!! Há ainda bastante trabalho pela frente, mas como você pode ter notado no vídeo do início do post já estamos dando boot pelo eMMC e micro SD Card. Mas isso é um spoiler, trabalho em progresso e deve entrar no Kernel v5.12. A comunidade ativa que trabalha com a plataforma da Actions Semiconductors no Kernel Linux é bem pequena mas tem tido bastante progresso. Eles também estão adicionando o suporte ao PMIC da Actions que é usado em conjunto com os SoCs, então esperamos que ainda em 2021 teremos uma versão de Kernel mainline pronta  pra uso com tudo que a placa oferece.
+For now what the device tree source of Caninos Loucos Labrador describes is the UART 3 serial port, a clock for the serial to be used as a console and ONLY THIS!! There is still a lot of work ahead, but as you may have noticed in the video at the beginning of the post, we are already booting from the eMMC and micro SD Card. But this is a spoiler, work in progress and should enter the kernel v5.12. The active community that works with the Actions Semiconductors platform on the Linux Kernel is quite small but has made a lot of progress. They are also adding support for Actions PMIC which is used in with Actions SoCs, so hopefully by 2021 we will have a mainline Kernel version ready to use with everything the board offers.
 
-### Por que é Importante Manter Mainline?
+### Why is Mainline Important?
 
-Talvez você esteja se perguntando:
+> 🤔Why have this work to add support to the Kernel Mainline if the Caninos engineers already maintain a repository on Github with a version that works well on Labrador hardware?
 
-> 🤔Por que ter esse trabalho para adicionar no Kernel Mainline se o pessoal da Caninos já mantem um repositório no Github com uma versão que funciona bem no hardware do Labrador?
+Let's say, hypothetically, that a new vulnerability has been discovered in the Linux kernel. In order to keep your system safe you have to update to the latest version that fixes said vulnerability. When a vulnerability is discovered, an effort is made by Kernel developers to release patches with fixes as soon as possible. And do you know where these patches are applied? In the mainline tree of the Linux kernel. In order to apply these corrections in a `downstream` Kernel you will have more work and you have to take care to be using a `LTS - Long Term Support` version, and also long-term support takes longer to reach end of life but will eventually end.  And make sure not to add modifications that are very different from the development pattern of the Linux Kernel, and always update your downstream to avoid conflicts. Without saying in the "non-critical" bug fixes that the community finds and new features added, the development of the Linux Kernel is very dynamic. It is much more laborious to maintain a downstream instead of applying an initial "bureaucratic" effort to maintain a mainline. The bureaucracy and processes of applying code to the Linux Kernel will guarantee the quality of system support for your hardware from the beginning.
 
-Vamos dizer, hipoteticamente, que uma nova vulnerabilidade foi descoberta no Kernel Linux. Para manter seu sistema seguro você tem que atualizar para a mais recente versão que corrige a dita vulnerabilidade. Quando uma vulnerabilidade é descoberta ocorre um esforço pelos desenvolvedores do Kernel para lançar assim que possível patches de correção. E sabe onde que esses patches são aplicados? Na árvore `mainline` do Kernel Linux. Para aplicar essas correções em um Kernel `downstream` você vai ter mais trabalho e tem que tomar o cuidado de estar usando uma versão `LTS - Long Term Support` e não adicionar modificações que fujam muito do padrão de desenvolvimento do Kernel Linux, mantendo sempre seu `downstream` atualizado para não acontecerem conflitos. Sem dizer nos bug fixes não "críticos" que a comunidade encontra e novas funcionalidades adicionadas, o desenvolvimento do Kernel Linux é muito dinâmico. É bem mais trabalhoso manter um `downstream` ao invés de aplicar um esforço burocrático inicial de manter `mainline`. A burocracia e processos de aplicar código no Kernel Linux vão garantir desde o começo a qualidade do suporte do sistema para seu hardware.
+> ⚠️ I'm not saying it's wrong to keep downstream. In some cases, the best way to support a platform quickly is to maintain some form of downstream. But it is important to work downstream as if you are on mainline, and strive to have exclusive downstream modifications applied to mainline as soon as possible. This will make your life much easier in the future.
 
->⚠️ Não estou dizendo que é errado manter `downstream`. Em alguns casos, a melhor forma de dar suporte rápido à uma plataforma é manter alguma forma de `downstream`. Mas é importante trabalhar em `downstream` como se você estivesse em `mainline`,  e se esforçar para que as modificações exclusivas do `downstream` sejam aplicadas em `mainline` o quanto antes. Isso vai facilitar muito a sua vida no futuro.
+## Conclusion
 
-## Conclusão
+A priori it seems kind of silly to be so excited about a lot of little letters appearing on a screen coming from an electronic device, but I was very proud to see a project with Brazilian work being officially added to the largest free software project in the world. And I was also very happy to had the opportunity to worked on it. It is still an initial support but it is a start. We still have a lot of code ahead but we cannot give up on national projects and we have to encourage it, give feedback, test and contribute whenever possible.
 
-A priori parece meio bobo ficar tão entusiasmado com um monte de letrinhas aparecendo em uma tela vindo de uma plaquinha eletrônica, mas eu fiquei muito orgulhoso de ver um projeto com trabalho Brasileiro sendo adicionada oficialmente ao maior software de código livre do mundo. E fiquei também muito feliz te ter tido a oportunidade de ter trabalhado nisso. É um suporte ainda inicial mas é um começo. Temos ainda bastante código pela frente mas não podemos desistir dos projetos nacionais e temos que incentivar, dar feedback, testar e contribuir sempre que possível.
+### Recognition
 
-### Reconhecimento
-
-Ao pessoal da [RoboCore](https://www.robocore.net/) e LSI-Tec pelo programa de testes do Labrador. Foi pelo programa de testes que eu consegui por as minhas mãos em um Labrador pela primeira vez.
+To the people of [RoboCore] (https://www.robocore.net/) and LSI-Tec for the Labrador testing program. It was through the testing program that I got my hands on a Labrador for the first time. Also to the Actions Semi community on Kernel Mainline.
