@@ -1,10 +1,6 @@
-﻿Como alguém disse certa vez: "O ano só acaba quando termina". Aqui está minha retrospectiva 2020 (aos 45 minutos do segundo tempo).
+﻿Vamos à retrospectiva 2020. Primeiramente vou apresentar com comentários os meus top 5 acontecimentos do ano e no final listar todos eles.
 
-2020 foi difícil, desafiador e de certa forma incrível. Pra quem teve o privilégio de poder trabalhar de casa, nunca estivemos tão conectados. O mundo parou, ficou em casa, mas se conectou na rede mundial de computadores. Foi um ano de oportunidades para mim, moro no Brasil e não tenho muitas oportunidades de participar de eventos internacionais (e não sou muito de viajar mesmo). Mas esse ano eu aproveitei para participar de todos os eventos que aconteceram de forma online. Foi importante isso porque eu me senti incluído na comunidade técnica global e que não estou muito atrás de quem tem essas oportunidades internacionais. É incrível como as informações abertas, open source e comunidades nos dão oportunidades de trabalhar com o que você desejar, quando e onde quiser. 
-
-É, esse post vai ser bem pessoal mesmo. Mas desabafos a parte, vamos à retrospectiva. Primeiramente vou apresentar com comentários os meus top 5 acontecimentos do ano e no final listar todos eles.
-
-Mas antes um resumo dos resultados do ano:
+Mas antes um resumão dos resultados do ano:
 
 ## Resumo
 
@@ -77,8 +73,17 @@ E por fim mas nem de longe menos importante tive o prazer de participar do MVP C
 
 -   User Interface usando .NET Core, WinUI, XAML para aplicações IoT Linux é Possível?
 ![PPT Uno Platform Embedded Linux](https://github.com/microhobby/blog/blob/master/img/retro-mvpconf1.PNG?raw=true)
+
+## Feliz 2021
+
+2020 foi difícil, desafiador e de certa forma incrível. Pra quem teve o privilégio de poder trabalhar de casa, nunca estivemos tão conectados. O mundo parou, ficou em casa, mas se conectou na rede mundial de computadores. Foi um ano de oportunidades para mim, moro no Brasil e não tenho muitas oportunidades de participar de eventos internacionais (e não sou muito de viajar mesmo). Mas esse ano eu aproveitei para participar de todos os eventos que aconteceram de forma online. Foi importante isso porque eu me senti incluído na comunidade técnica global e que não estou muito atrás de quem tem essas oportunidades internacionais. É incrível como as informações abertas, open source e comunidades nos dão oportunidades de trabalhar com o que você desejar, quando e onde quiser. Mesmo que de forma online conheci e me conectei com muitos colegas da comunidade técnica internacional e esse network, troca de figurinhas, está sendo sensacional para minha carreira e vida pessoal. 2020 FOI TOP apesar dos pesares. 
+
+Aqui eu só coloquei as vitórias, mas a vida é uma caixinha de surpresas não é mesmo? E lógico que também tive meus momentos baixos esse 2020, e não foram poucos. Esses resultados que fico feliz de compartilhar foram "forjados em suor e lágrimas" 😎. Mas estou agradecido por estar vivo e ter tido oportunidade de fazer tanta coisa bacana em 2020.
+
+Enfim, desejo a todos que acompanham meu trabalho um feliz 2021, muita saúde e paz para você e sua família!!!
  
-## Acontecimentos de 2020
+
+## Todos os Acontecimentos de 2020
 
 - Janeiro
 	- Youtube: [🖥️ O que é um Computador em Módulo ? - Pt1](https://youtu.be/pM1VTNxSsqc)
@@ -179,9 +184,3 @@ E por fim mas nem de longe menos importante tive o prazer de participar do MVP C
 	- Tweet: [WSL 2 Running new Kernel Linux v5.10](https://twitter.com/math_castello/status/1338320788596862978)
 	- Live (podcast): [Linux Mint Brasil | Podcast on Spotify](https://open.spotify.com/episode/31LlChjas2mDdPTIFgdggc)
 
-
-## FELIZ ANO NOVO
-
-2020 foi difícil, aqui eu só coloquei as vitórias, mas a vida é uma caixinha de surpresas não é mesmo? E lógico que também tive meus momentos baixos esse 2020, e não foram poucos. Esses resultados que fico feliz de compartilhar são "forjados em suor e lágrimas" 😎. Mas estou feliz por estar vivo e ter tido oportunidade de fazer tanta coisa bacana em 2020. Mesmo que de forma online conheci e me conectei com muitos colegas da comunidade técnica internacional e esse network, troca de figurinhas, está sendo sensacional para minha carreira e vida pessoal. 2020 FOI TOP apesar dos pesares.
-
-Enfim, desejo a todos que acompanham meu trabalho um feliz 2021, muita saúde e paz para você e sua família!!!
