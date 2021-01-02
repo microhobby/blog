@@ -28,7 +28,7 @@ E esse foi de longe o vídeo que mais teve views esse ano no canal, hoje com 139
 
 ### Talk no WSL Conf 2020
 
-Em Setembro aconteceu o WSL Conf 2020. Foi incrível poder ter a oportunidade de compartilhar sobre o tema: "**Customizing Linux Kernel for WSL 2 - Tips and Tricks**"
+Em Setembro aconteceu o WSL Conf 2020. Foi incrível poder ter a oportunidade de compartilhar sobre o tema: `Customizing Linux Kernel for WSL 2 - Tips and Tricks`
 
 ![WSL Conf Tweet](https://github.com/microhobby/blog/blob/master/img/retro-wslconftwett.PNG?raw=true)
 
@@ -65,13 +65,13 @@ Depois ainda tive oportunidade de participar do TDC Online Florianópolis e São
 
 E por fim mas nem de longe menos importante tive o prazer de participar do MVP Conf Latam 2020. O convite para essa conferência foi também uma grande surpresa do ano de 2020, porque geralmente quem palestra no MVP Conf, como o nome já diz, são os `Microsoft Most Valuable Professionals` e eu não sou `Microsoft MVP`. Mas recebi com muita felicidade o convite do MVP [Claudenir Andrade](https://www.linkedin.com/in/claudenirandrade/) para participar, já que esses ano eu trabalhei e compartilhei bastante conteúdo sobre tecnologias Microsoft, sempre ligadas a Linux lógico. Compartilhei três talks durante o MVP Conf Latam na trilha IoT: 
 
--   Criando Aplicações IoT com Dotnet
+-   `Criando Aplicações IoT com Dotnet`
 ![PPT dotnet iot](https://github.com/microhobby/blog/blob/master/img/retro-mvpconf3.PNG?raw=true)
 
--   .NET Standard para Microcontroladores com Meadow F7
+-   `.NET Standard para Microcontroladores com Meadow F7`
 ![PPT Meadow F7](https://github.com/microhobby/blog/blob/master/img/retro-mvp2.PNG?raw=true)
 
--   User Interface usando .NET Core, WinUI, XAML para aplicações IoT Linux é Possível?
+-   `User Interface usando .NET Core, WinUI, XAML para aplicações IoT Linux é Possível`?
 ![PPT Uno Platform Embedded Linux](https://github.com/microhobby/blog/blob/master/img/retro-mvpconf1.PNG?raw=true)
 
 ## Feliz 2021
