@@ -6,7 +6,7 @@ Mas antes um resumão dos resultados do ano:
 
 ![2020 Review](https://github.com/microhobby/blog/blob/master/img/retro-summaryreview2020.png?raw=true)
 
-Obs: das 24 talks/lives 7 foram em Inglês para um público internacional. Dos 28 Videos no Youtube 10 foram em Inglês. Inglês não é minha linguagem nativa e não me considero um "bom falante" da língua. Mas nesse ano de 2020 um dos  objetivos foi melhorar o Inglês, os vídeos no Youtube ajudaram bastante a perder um pouco da vergonha e nervosismo ao usar o Inglês nas lives e talks ao vivo. 
+> Obs: das 24 talks/lives 7 foram em Inglês para um público internacional. Dos 28 Videos no Youtube 10 foram em Inglês. Inglês não é minha linguagem nativa e não me considero um "bom falante" da língua. Mas nesse ano de 2020 um dos  objetivos foi melhorar o Inglês, os vídeos no Youtube ajudaram bastante a perder um pouco da vergonha e nervosismo ao usar o Inglês nas lives e talks ao vivo.
 
 ### Linux Kernel Builds
 
