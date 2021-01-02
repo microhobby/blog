@@ -44,7 +44,7 @@ E o Codespaces é o VS Code que roda no browser, então sem mais. PRÓXIMO!
 - Favorito: **Wilderness Labs Meadow F7**
 - Promessa: **SparkFun MicroMods**
 
-A Wilderness Labs tem feito um trabalho muito interessante com o Meadow F7. Ele roda um port do Mono Framework que possibilita rodar .NET Standard em microcontroladores, assim eu consigo reutilizar bibliotecas escritas em C# que sigam esse padrão, usar os pacotes NuGet e etc.
+A Wilderness Labs tem feito um trabalho muito interessante com o Meadow F7. Ele roda um port do Mono Framework que possibilita rodar .NET Standard em microcontroladores, assim eu consigo reutilizar bibliotecas escritas em C# que sigam esse padrão, usar os pacotes NuGet e etc. O Meadow Foundation tem uma API para acesso ao hardware muito boa e fácil no estilo `dotnet` e também já tem implementações para alguns dos dispositivos e módulos mais populares no mundo maker. Mas é bom mencionar que o `Meadow OS` ainda está em fase beta, o stack de rede para conexão WiFi ainda está em desenvolvimento, funciona, mas não é otimizado. Mas de qualquer forma rodar .NET em uma placa com apenas 32MB de RAM à 216MHz é ainda bem impressionante. Ele será uma boa opção para usar as habilidades de .NET e C# para projetos IoT.
 
 A promessa fica por conta do SparkFun MicroMods. Em breve vai ter review dele aqui. A ideia de um MoM (Microcontroller on Module) é muito boa, não é novidade, mas usar um conector M.2 para isso é bem interessante. Outra coisa interessante é que o padrão dos pinos do SparkFun MicroMods é open, então a esperança é que esse padrão fique popular e torne-se um padrão de mercado. Daí teremos vários MoMs por ai pinos compatíveis com múltiplas placas bases.
 
