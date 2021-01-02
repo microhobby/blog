@@ -2,6 +2,8 @@
 
 > ⚠️ Lembrando que essa lista é baseada apenas e somente na minha humilde opinião 💩 e estão mais relacionadas à minha área de atuação (sistemas embarcados, Linux embarcado)! Foram tecnologias que eu tive a oportunidade de trabalhar e testar durante 2020.
 
+Irei dividir os "prêmios" em classes e para cada uma irei apontar o vencedor, segundo minha opinião, e uma outra que eu achei que é uma "promessa", que vale a pena ficar de olho é um destaque dentro da dita classe. Então vamos lá para os vencedores do "MicroHobby top tech 2020"!
+
 ### Linguagem de Programação
 
 ![top languages 2020](https://github.com/microhobby/blog/blob/master/img/retro-lang.png?raw=true)
@@ -9,7 +11,7 @@
 - Favorito: **C#**
 - Promessa: **Python**
 
-C# com .NET Core 3.1 ou .NET 5 para sistemas Linux Embarcado tem sido uma mão na roda, tanto para aplicações headless ou com GUI. Interoperabilidade da linguagem é fantástica, super fácil e transparente acessar bibliotecas nativas. A plataforma é bem robusta e otimizada para rodar em armv7 e armv8. Também temos C# rodando para microcontroladores com o NanoFramework e com o Meadow OS.
+C# com .NET Core 3.1 ou .NET 5 para sistemas Linux Embarcado tem sido uma mão na roda, tanto para aplicações headless ou com GUI. Interoperabilidade da linguagem é fantástica, super fácil e transparente acessar bibliotecas nativas. A plataforma é bem robusta e otimizada para rodar em armv7 e armv8. Também temos C# rodando para microcontroladores com o `NanoFramework` e com o `Meadow OS`.
 
 Python é a promessa, promessa só pra mim porque já é uma linguagem com um ecossistema bem sólido. Eu pessoalmente não gosto da linguagem (minha opinião pessoal!!!). Mas pelo ecossistema e comunidade a plataforma tem muitas facilidades, bibliotecas que facilitam e agilizam seu trabalho. Tenho trabalhado com python no meu emprego atual em um dos projetos e não tem essa de linguagem favorita, tem a linguagem que é a melhor ferramenta para resolver um certo problema e paga seus boleto 🤣. Então não escapatória, python é muito popular e a tendencia é só crescer. Mesmo não sendo a favorita é bom ficar de olho e manter skills.
 
@@ -64,7 +66,7 @@ A promessa não é bem promessa de novo, como todo lançamento da Raspberry Pi F
 - Favorito: **UNO Platform**
 - Promessa: **Total Cross**
 
-Nesse ano eu também testei e trabalhei com vários frameworks para GUI, focados para Linux Embarcado. O UNO Platform em si não é uma novidade, mas o suporte para Linux foi anunciado esse ano. E desde que foi anunciado como preview tem um suporte muito bom. Ter a possibilidade de reutilizar XAML e C# para trabalhar com a GUI em Linux Embarcado é incrível.
+Nesse ano eu também testei e trabalhei com vários frameworks para GUI, focados para Linux Embarcado. O UNO Platform em si não é uma novidade, mas o suporte para Linux foi anunciado esse ano. E desde que foi anunciado, mesmo como preview, tem um suporte muito bom. Ter a possibilidade de utilizar XAML e C# para trabalhar com GUI em Linux Embarcado é INCRÍVEL. Usar o framework é muito fácil, roda em X11 ou Wayland e não é necessário compilar nada adicional para arquitetura `armv7` ou `armv8`, já vem tudo certo nos pacotes NuGet. Sem falar no suporte da comunidade e documentação. Eu diria que o Uno Platform foi um dos principais achados do meu ano. In love 😍
 
 A promessa fica por conta do Total Cross. Tive oportunidade de testar e trabalhar com o framework esse ano. Primeiro que o framework é desenvolvido por Brasileiros, daí já ganha pontos 😝. Tem sua própria virtual machine para um subset de Java, gera arquivos de deploy bem pequenos (ótimo para sistemas com pouco armazenamento) e também roda bem sem necessidade de GPU. Ainda tem algumas questões de interoperabilidade com bibliotecas nativas, mas esse feedback já foi recebido pelo time da Total Cross e eles estão trabalhando nisso (já tem algo em preview inclusive). Então é ficar de olho no Total Cross porque promete.
 
