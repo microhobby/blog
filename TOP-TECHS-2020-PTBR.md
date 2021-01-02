@@ -6,8 +6,8 @@
 
 ![top languages 2020](https://github.com/microhobby/blog/blob/master/img/retro-lang.png?raw=true)
 
-- Favorito: C#
-- Promessa: Python
+- Favorito: **C#**
+- Promessa: **Python**
 
 C# com .NET Core 3.1 ou .NET 5 para sistemas Linux Embarcado tem sido uma mão na roda, tanto para aplicações headless ou com GUI. Interoperabilidade da linguagem é fantástica, super fácil e transparente acessar bibliotecas nativas. A plataforma é bem robusta e otimizada para rodar em armv7 e armv8. Também temos C# rodando para microcontroladores com o NanoFramework e com o Meadow OS.
 
@@ -17,8 +17,8 @@ Python é a promessa, promessa só pra mim porque já é uma linguagem com um ec
 
 ![top linux distro 2020](https://github.com/microhobby/blog/blob/master/img/retro-distro.png?raw=true)
 
-- Favorito: Ubuntu
-- Promessa: Alpine
+- Favorito: **Ubuntu**
+- Promessa: **Alpine**
 
 Eu costumo mudar bastante de opinião sobre distros Linux. Se eu fosse escolher a minha distro preferida no meio do ano eu escolheria sem nem pensar: DEBIAN! Mas agora no final do ano a minha escolha vai pro Ubuntu, pelo suporte. O suporte da comunidade da Canonical  ao meu ver tem sido melhor, principalmente para o Windows Subsystem for Linux. Na verdade eu não tenho visto nenhum interesse da comunidade Debian com o WSL, talvez estejam com o pé atrás ainda. Eu até me ofereci a ajudar com um suporte da Distro Debian para o WSL 2, mas meio que fui ignorado (novamente deixar claro que essa é minha opinião, talvez eu tenha interpretado de forma errada 🤷‍♂️). Bem, com isso dito, e eu tenho utilizado cada vez mais o WSL  no meu dia a dia, nada mais certo do que ficar no Ubuntu que tem um suporte INCRIVEL para a comunidade do WSL.
 
@@ -28,8 +28,8 @@ Alpine, meu querido Alpine! Escolha promessa porque não é aquela distro que eu
 
 ![top ide 2020](https://github.com/microhobby/blog/blob/master/img/retro-ide.png?raw=true)
 
-- Favorito: VS Code
-- Promessa: Codespaces
+- Favorito: **VS Code**
+- Promessa: **Codespaces**
 
 Não tem pro VS Code. "Ah mas ele não é IDE, ele é só uma editor de código" 🙄. O VS Code tem trilhões de extensões, você consegue montar sua própria IDE para seja lá o que você quiser fazer! Além disso a API para escrever extensões é a coisa mais fácil e linda que eu já vi. E eu falo com propriedade, desenvolvo extensões tanto para VS Code quanto VS 2019 e a API de extensões do VS 2019 é um filme de terror com o roteiro ruim. CONFIA
 
@@ -39,8 +39,8 @@ E o Codespaces é o VS Code que roda no browser, então sem mais. PRÓXIMO!
 
 ![top microcontrolled boards 2020](https://github.com/microhobby/blog/blob/master/img/retro-microcontrolled.png?raw=true)
 
-- Favorito: Wilderness Labs Meadow F7
-- Promessa: SparkFun MicroMods
+- Favorito: **Wilderness Labs Meadow F7**
+- Promessa: **SparkFun MicroMods**
 
 A Wilderness Labs tem feito um trabalho muito interessante com o Meadow F7. Ele roda um port do Mono Framework que possibilita rodar .NET Standard em microcontroladores, assim eu consigo reutilizar bibliotecas escritas em C# que sigam esse padrão, usar os pacotes NuGet e etc.
 
@@ -50,8 +50,8 @@ A promessa fica por conta do SparkFun MicroMods. Em breve vai ter review dele aq
 
 ![top microprocessed boards](https://github.com/microhobby/blog/blob/master/img/retro-microprocessed.png?raw=true)
 
-- Favorito: Apalis iMX8QM
-- Promessa: Raspberry Pi 4
+- Favorito: **Apalis iMX8QM**
+- Promessa: **Raspberry Pi 4**
 
 Eu não fiz essa lista ano passado, mas com certeza  a placa microprocessada de escolha também seria o Apalis iMX8QM. A placa é uma ignorância só, duas GPUs, processamento heterogêneo, 6 cores ARM sendo 2x A72 e 4x A53, 4 cores ARM  M4F e etc. RODA TUTO!
 
@@ -61,8 +61,8 @@ A promessa não é bem promessa de novo, como todo lançamento da Raspberry Pi F
 
 ![top GUI framework 2020](https://github.com/microhobby/blog/blob/master/img/retro-gui.png?raw=true)
 
-- Favorito: UNO Platform
-- Promessa: Total Cross
+- Favorito: **UNO Platform**
+- Promessa: **Total Cross**
 
 Nesse ano eu também testei e trabalhei com vários frameworks para GUI, focados para Linux Embarcado. O UNO Platform em si não é uma novidade, mas o suporte para Linux foi anunciado esse ano. E desde que foi anunciado como preview tem um suporte muito bom. Ter a possibilidade de reutilizar XAML e C# para trabalhar com a GUI em Linux Embarcado é incrível.
 
@@ -72,10 +72,10 @@ A promessa fica por conta do Total Cross. Tive oportunidade de testar e trabalha
 
 ![top tech 2020](https://github.com/microhobby/blog/blob/master/img/retro-toptech.png?raw=true)
 
-- Favorita: WSL 2
-- Promessa: Blazor
+- Favorita: **WSL 2**
+- Promessa: **Blazor**
 
-E por fim, mas não menos importante, as tecnologias em uma classificação mais genérica que eu usei esse ano. A minha favorita disparada foi o Windows Subsystem for Linux 2. Ter um Linux rodando em conjunto como Windows é lindo. A arquitetura e como foi estruturado é muito bacana. Ver a Microsoft dando suporte, e um ótimo suporte, contribuindo com as comunidades de open source e usando isso no Windows não tem preço. As possibilidades e oportunidades são infinitas.
+E por fim, mas não menos importante, as tecnologias em uma classificação mais genérica que eu usei esse ano. A minha favorita disparada foi o Windows Subsystem for Linux 2. Ter um Linux rodando em conjunto como Windows é lindo. É uma VM por debaixo dos panos mas como foi estruturado deixa tudo muito transparente e a interoperabilidade é muito boa. Ver a Microsoft dando suporte, e um ótimo suporte, contribuindo com as comunidades de open source e usando isso no Windows não tem preço. As possibilidades e oportunidades são infinitas.
 
 A promessa fica por conta do Blazor. No começo ele rodava um port  `WASM` (Web Assembly) do Mono Framework, e é bem legal ter o .NET rodando direto no seu browser com `WASM`. A experiência de desenvolvimento é realmente interessante, escrever C# como se fosse JavaScript, ainda mais para quem quer se aventurar no mundo da web e vem das tecnologias desktop da Microsoft. Mas para alguns problemas você ainda vai esbarra em código JavaScript de qualquer forma. Ele também tem a opção server side, a experiência é a mesmo do `WASM` só que o código roda no servidor e ele conversa via signalR com browser pra fazer as mudanças no browser. Cheguei a avaliar esse modo para Linux Embarcado e tive bons resultados. É uma tecnologia "hype" que a Microsoft está investindo bastante então tem que ficar de olho.
 
