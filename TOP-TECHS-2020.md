@@ -26,7 +26,7 @@ I usually change my mind about Linux distros. If I were to choose my favorite di
 
 Alpine, my dear Alpine! Choose as highlight because it is not that distro that I will use as a desktop distro, and I think this is not even his premise. It is popular in the world of Docker containers because it is minimal, based on BusyBox, uses `musl` instead of `glibc`, etc. And because of that, it has been a great choice as a minimal ready Linux distro for embedded systems.
 
-### Editor de Código
+### Code Editor
 
 ![top ide 2020](https://github.com/microhobby/blog/blob/master/img/retro-ide.png?raw=true)
 
