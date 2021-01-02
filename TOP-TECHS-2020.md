@@ -55,7 +55,7 @@ The highlight goes to SparkFun MicroMods. Soon there will be a review of it here
 - My Winner: **Apalis iMX8QM**
 - Highlighted: **Raspberry Pi 4**
 
-I didn't make this list last year, but surely the microprocessor board winner would also be the Apalis iMX8QM. The board is just an ignorance, two GPUs, heterogeneous processing, 6 ARM cores, 2x A72 and 4x A53, 4 ARM M4F cores and more. RUNS EVERYTHING!
+I didn't make this list last year, but surely the microprocessor board winner would also be the Apalis iMX8QM. The board is just an ignorance, two GPUs, heterogeneous processing, 6 ARM cores, 2x A72 and 4x A53, 4 ARM M4F cores and more. RUNS EVERYTHING! The Toradex software support is also very good, there is a Linux distro for the Toradex hardware the Torizon to run containerized applications. But I am suspicious to say since I work at Toradex ... 🤐
 
 The highlight goes to the Raspberry Pi 4. As every Raspberry Pi Foundation launch it is already very popular. Raspberry boards are the best choice for those who want to start in the world of Embedded Linux, and the new generation of boards has a very powerful hardware.
 

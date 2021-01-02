@@ -55,7 +55,7 @@ A promessa fica por conta do SparkFun MicroMods. Em breve vai ter review dele aq
 - Favorito: **Apalis iMX8QM**
 - Promessa: **Raspberry Pi 4**
 
-Eu não fiz essa lista ano passado, mas com certeza  a placa microprocessada de escolha também seria o Apalis iMX8QM. A placa é uma ignorância só, duas GPUs, processamento heterogêneo, 6 cores ARM sendo 2x A72 e 4x A53, 4 cores ARM  M4F e etc. RODA TUTO!
+Eu não fiz essa lista ano passado, mas com certeza  a placa microprocessada de escolha também seria o Apalis iMX8QM. A placa é uma ignorância só, duas GPUs, processamento heterogêneo, 6 cores ARM sendo 2x A72 e 4x A53, 4 cores ARM  M4F e etc. RODA TUTO! O suporte de software da Toradex também é muito bom, tem um tal de Torizon para rodar aplicações containerizadas. Mas eu sou suspeito em dizer já que trabalho na Toradex ... 🤐 
 
 A promessa não é bem promessa de novo, como todo lançamento da Raspberry Pi Foundation já está bem popular. As placas Raspberry são a melhor escolha pra quem quer começar no mundo do Linux Embarcado, e a nova geração de placas tem um hardware bem potente.
 
